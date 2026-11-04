@@ -17,7 +17,9 @@ int main(void) {
     // main loop
     while(1) {
         sleep_ms(100); // replacing with timer later
-        debug_display("hello world"); // debugging
+
+        // debugging
+        //debug_display("hello world");
     }
     return 1;
 }
