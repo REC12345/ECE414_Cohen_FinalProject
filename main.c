@@ -3,6 +3,8 @@
 #include "UI/debounce_ts.h"
 #include "UI/user_interface.h"
 
+#include "tests.c" // for testing
+
 // helps initialize various components of the program
 void initialize(void) {
     // misc
