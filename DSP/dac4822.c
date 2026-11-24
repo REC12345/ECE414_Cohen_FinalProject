@@ -4,15 +4,15 @@
 
 // DAC parameters (see the DAC datasheet)
 // important --> bit 13 = 1 (set gain=1x)
-#define DAC_config_chan_A 0b0011'0000'0000'0000 // A-channel, 1x, active
-#define DAC_config_chan_B 0b1011'0000'0000'0000 // B-channel, 1x, active (should probably be set inactive)
+#define DAC_config_chan_A 0b0011000000000000 // A-channel, 1x, active
+#define DAC_config_chan_B 0b1011000000000000 // B-channel, 1x, active (should probably be set inactive)
 
 //SPI configurations (GPIO numbers, *not* pin numbers!)
 #define PIN_MISO 4
 #define PIN_CS   5
 #define PIN_SCK  6
 #define PIN_MOSI 7
-#define SPI_PORT spi0
+#define SPI_PORT 0 //spi0
 
 void init_dac4822() {
     // Initialize SPI channel (channel, baud rate set to 20MHz)

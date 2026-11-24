@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "pico/stdlib.h"
-//#include "hardware/spi.h" // probably should uncomment this ???
+#include "hardware/spi.h" // probably should uncomment this ???
 
 // initializes the dac
 void init_dac4822();

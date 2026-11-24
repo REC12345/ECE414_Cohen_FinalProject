@@ -8,7 +8,8 @@
 // helps initialize various components of the program
 void initialize(void) {
     // misc
-    
+    // will need to enable round robin sampling
+
     // UI
     user_interface_init();
     debounce_ts_init();
@@ -21,6 +22,8 @@ int main(void) {
     uint16_t x;
     uint16_t y;
     char button;
+
+    SWTEST_DAC();
 
     // main loop
     while(1) {

@@ -12,6 +12,9 @@
 
 // -------- SW2 - TESTING DSP COMPONENTS--------
 // -------- SW2.1 - TESTING DAC --------
+void SWTEST_DAC() {
+    sine_wave(440, 1024, 0);
+}
 
 // -------- SW2.2 - TESTING ADC --------
 

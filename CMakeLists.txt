@@ -12,6 +12,8 @@ add_executable(ECE414_Cohen_FinalProject
     UI/user_interface.c
     UI/TouchScreen.c
     UI/TFTMaster.c
+    DSP/dac4822.c
+    DSP/signal_generator.c
 )
 
 pico_generate_pio_header(ECE414_Cohen_FinalProject ${CMAKE_CURRENT_LIST_DIR}/SPIPIO.pio)
@@ -22,6 +24,7 @@ target_link_libraries(ECE414_Cohen_FinalProject
     hardware_pio 
     hardware_irq
     hardware_adc
+    hardware_spi
     pico_bootsel_via_double_reset
 )
 
