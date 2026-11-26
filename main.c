@@ -18,12 +18,14 @@ void initialize(void) {
 }
 
 int main(void) {
+    // tests go here
+    SWTEST_DAC();
+    return 1;
+
     initialize();
     uint16_t x;
     uint16_t y;
     char button;
-
-    SWTEST_DAC();
 
     // main loop
     while(1) {

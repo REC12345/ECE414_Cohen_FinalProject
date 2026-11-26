@@ -1,12 +1,9 @@
 #ifndef SIGNAL_GENERATOR
 #define SIGNAL_GENERATOR
 
-#include <math.h>
 #include <stdint.h>
 #include "pico/stdlib.h"
-#include "dac4822.h"
 
-#define PI 3.141592653589793
 
 // NOTE: These functions are NOT meant to have low latency as they are used for testing only
 

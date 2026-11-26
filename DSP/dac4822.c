@@ -12,7 +12,7 @@
 #define PIN_CS   5
 #define PIN_SCK  6
 #define PIN_MOSI 7
-#define SPI_PORT 0 //spi0
+#define SPI_PORT spi0
 
 void init_dac4822() {
     // Initialize SPI channel (channel, baud rate set to 20MHz)
