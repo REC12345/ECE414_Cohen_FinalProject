@@ -5,6 +5,7 @@
 #include "TouchScreen.h"
 
 // initialize the touchscreen, draw the background for the display
+// assumes adc_init() has already been called
 void user_interface_init();
 
 // returns the button corresponding to the given coordinates

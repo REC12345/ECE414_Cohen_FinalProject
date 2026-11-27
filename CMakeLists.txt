@@ -14,6 +14,9 @@ add_executable(ECE414_Cohen_FinalProject
     UI/TFTMaster.c
     DSP/dac4822.c
     DSP/signal_generator.c
+    DSP/adc_control.c
+    DSP/dsp_controller.c
+    DSP/dsp_effects.c
 )
 
 pico_generate_pio_header(ECE414_Cohen_FinalProject ${CMAKE_CURRENT_LIST_DIR}/SPIPIO.pio)

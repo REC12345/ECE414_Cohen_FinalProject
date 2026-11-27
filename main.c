@@ -2,12 +2,15 @@
 
 #include "UI/debounce_ts.h"
 #include "UI/user_interface.h"
+#include "DSP/dac4822.h"
 
 #include "tests.c" // for testing
 
 // helps initialize various components of the program
 void initialize(void) {
-    // misc
+    // general
+    stdio_init_all();
+    adc_init(); // needed for user_interface, adc_control
     // will need to enable round robin sampling
 
     // UI
@@ -15,11 +18,12 @@ void initialize(void) {
     debounce_ts_init();
 
     // DSP
+    init_dac4822();
 }
 
 int main(void) {
     // tests go here
-    SWTEST_DAC();
+    SWTEST_DSP();
     return 1;
 
     initialize();

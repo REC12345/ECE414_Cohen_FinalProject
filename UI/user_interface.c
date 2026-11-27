@@ -51,7 +51,6 @@ void basic_ui() {
 }
 
 void user_interface_init() {
-    adc_init();
     tft_init_hw();
     tft_begin();
 

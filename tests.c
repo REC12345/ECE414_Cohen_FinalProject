@@ -3,11 +3,12 @@
  * The details and justififications for these tests can be found in the "Software Testing" document
  * 
  */
-#include <stdio.h>
 #include "pico/stdlib.h"
 
 #include "DSP/dac4822.h"
 #include "DSP/signal_generator.h"
+#include "DSP/adc_control.h"
+#include "DSP/dsp_controller.h"
 
 // -------- SW1 - TESTING UI --------
 
@@ -39,8 +40,29 @@ void SWTEST_DAC() {
 }
 
 // -------- SW2.2 - TESTING ADC --------
+void SWTEST_ADC() {
+    // 
+    stdio_init_all();
+    adc_init();
+
+    init_adc_control();
+    init_dac4822();
+
+
+    while(1) {
+        sleep_us(100);
+        write_dac4822(read_adc_value());
+    }
+    return;
+}
 
 // -------- SW2.3 - TESTING DSP --------
+void SWTEST_DSP() {
+    stdio_init_all();
 
+    dsp_start();
+
+    return;
+}
 
 // -------- SW3 - INTEGRATION TESTING --------
